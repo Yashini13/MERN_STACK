@@ -27,7 +27,8 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-const PORT = process.env.PORT || 3000;
+//const PORT = process.env.PORT || 3000;
+const PORT = meta.env.VITE_REACT_APP_BACKEND_BASEURL || 3000;
 
 //Backend Routes
 app.use("/api/v1/user", userRoute);
